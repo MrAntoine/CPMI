@@ -1,0 +1,9 @@
+
+.content {
+    padding: 20px;
+}
+
+form > * {
+    padding: 5px;
+    border-radius: 5px;
+}
