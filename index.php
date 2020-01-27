@@ -37,6 +37,10 @@ include("config/actions.php");
         <button type="submit">Fichiers</button>
     </form>
 
+    <form method="post" action="index.php?action=databse">
+        <button type="submit">Database</button>
+    </form>
+
 </nav>
 
 <?php

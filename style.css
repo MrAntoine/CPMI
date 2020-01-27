@@ -25,6 +25,10 @@ nav > form > button {
 
 }
 
+nav H1 {
+    color: white;
+}
+
 button:hover {
     cursor: pointer;
     background-color: aliceblue;

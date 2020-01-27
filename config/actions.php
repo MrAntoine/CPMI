@@ -7,6 +7,7 @@ $listeDesActions = array(
     "traducteur" => "exo/traducteur.php",
     "fichiers" => "exo/fichiers.php",
     "traducteur2" => "exo/traducteur2.php",
+    "database" => "exo/database.php",
     "ages" => "exo/ages.php"
 );
 
