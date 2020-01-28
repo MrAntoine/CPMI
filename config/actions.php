@@ -8,6 +8,9 @@ $listeDesActions = array(
     "fichiers" => "exo/fichiers.php",
     "traducteur2" => "exo/traducteur2.php",
     "database" => "exo/database.php",
+    "commandes" => "exo/commandes.php",
+    "commande" => "exo/commande.php",
+    "client" => "exo/client.php",
     "ages" => "exo/ages.php"
 );
 

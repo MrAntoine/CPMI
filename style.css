@@ -1,7 +1,145 @@
+.wrapper {
+    padding: 50px;
+}
+
+.tableau {
+    margin-top: 50px;
+}
+
+.center {
+    text-align: center;
+}
+
+.titre {
+    font-weight: bold;
+    font-size: 16pt;
+}
+
+.standard-table{
+    border: 0;
+    width: 100%;
+}
+
+.standard-table td, th{
+    border: 0;
+    text-align: center;
+}
+
+.standard-table thead th{
+    border :0;
+    text-align: center;
+}
+
+.prix {
+    width: 30%;
+    margin-left: auto;
+}
+
+.prix td {
+    width: 50%;
+}
+
+a
+{
+    color: #7F3734;
+    text-decoration: none;
+    transition: color 0.25s;
+}
+a:hover
+{
+    color: #FFCC5C;
+}
+​
+body
+{
+    /* structure */
+    margin: 0 auto;
+    padding: 1em;
+    min-height: 100%;
+    width: 80%;
+}
+​
+html
+{
+    /* structure */
+    height: 100%;
+        /* presentation */
+    background-color: #F8FFF2;
+}
+​
+h1
+{
+    color: #00968B;
+}
+​
+
+.order-form-customer
+{
+    /* structure */
+    padding: 1em 0;
+        /* presentation */
+    text-align: right;
+}
+​
+​
+.standard-table
+{
+    border-collapse: collapse;
+    width: 100%;
+}
+.standard-table caption
+{
+    /* structure */
+    padding: 0.5em 0;
+        /* presentation */
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.standard-table tbody tr
+{
+    transition: background-color 0.25s;
+}
+.standard-table tbody tr:nth-child(even),
+.standard-table tfoot tr:nth-child(even)
+{
+    background-color: #DFE5DA;
+}
+.standard-table tbody tr:nth-child(odd),
+.standard-table tfoot tr:nth-child(odd)
+{
+    background-color: #BABFB5;
+}
+.standard-table tbody tr:hover
+{
+    background-color: #998882;
+    cursor: default;
+}
+.standard-table td,
+.standard-table th
+{
+    padding: 0.25em 0.5em;
+}
+.standard-table th
+{
+    color: #00968B;
+}
+.standard-table tfoot tr,
+.standard-table thead tr
+{
+    text-align: left;
+}
+.standard-table tfoot tr,
+.standard-table .money-column
+{
+    text-align: right;
+}
+
 table {
     border: medium solid #000000;
     width: 20%;
 }
+
 td, th {
     border: thin solid #6495ed;
 }
@@ -35,4 +173,19 @@ button:hover {
     color: cornflowerblue;
     font-weight: bold;
 }
+
+.table {
+    width: 50%;
+}
+
+.client  span {
+    text-align: right;
+    margin-right: auto;
+    color:red;
+}
+
+
+
+
+
 

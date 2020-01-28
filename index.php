@@ -2,6 +2,11 @@
 
 <?php
 include("config/actions.php");
+include("config/bd.php");
+include("config/config.php");
+
+session_start();
+ob_start();
 ?>
 
 
@@ -39,6 +44,10 @@ include("config/actions.php");
 
     <form method="post" action="index.php?action=databse">
         <button type="submit">Database</button>
+    </form>
+
+    <form method="post" action="index.php?action=commandes">
+        <button type="submit">Commandes</button>
     </form>
 
 </nav>
