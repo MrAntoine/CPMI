@@ -18,6 +18,10 @@ ob_start();
         <button type="submit">Loto</button>
     </form>
 
+    <form method="post" action="index.php?action=interactionDB">
+        <button type="submit">DB Interact</button>
+    </form>
+
     <form method="post" action="index.php?action=test">
         <button type="submit">Test</button>
     </form>

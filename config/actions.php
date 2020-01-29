@@ -11,6 +11,8 @@ $listeDesActions = array(
     "commandes" => "exo/commandes.php",
     "commande" => "exo/commande.php",
     "client" => "exo/client.php",
+    "interactionDB" => "exo/interactionDB.php",
+    "processdb" => "exo/process/DB_process.php",
     "ages" => "exo/ages.php"
 );
 
