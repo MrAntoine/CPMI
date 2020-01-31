@@ -1,7 +1,3 @@
-<h2>Détails de commande</h2>
-
-<a href="index.php?action=commandes">Retourner à la liste des commandes</a>
-
 <?php
 
 $numero_commande = $_GET['id'];
@@ -47,17 +43,27 @@ $query4->execute(array($line['productCode']));
 $line4 = $query4->fetch();
 
 
-echo "<div class='wrapper'> ";
+echo "<div class='wrapper'> 
 
-echo "<span class='center titre'>Commande n° " . $numero_commande . " : </span>";
+
+<h1>Détails de commande</h1>
+
+<a href='index.php?action=commandes'>Retourner à l'accueil</a>";
+
+
+
 
 //CLIENT
 echo "<div class=\"client\" style=\"text-align: right;\">
-<span>" . $line3['customerName'] . "</span><br><br>
-<span><a href='index.php?action=client&id=" . $line3['customerNumber'] . "'>" . $line3['contactLastName'] . " " . $line3['contactFirstName'] . "</a></span><br>
-<span>" . $line3['addressLine1'] . "</span><br>
-<span>" . $line3['city'] . " , " . $line3['postalCode'] . "</span><br>
+<div class='titre'>" . $line3['customerName'] . "</div><br>
+<div><a href='index.php?action=client&id=" . $line3['customerNumber'] . "'>" . $line3['contactFirstName'] . " " . $line3['contactLastName'] . "</a></div><br>
+<div>" . $line3['addressLine1'] . "</div><br>
+<div>" . $line3['city'] . " , " . $line3['postalCode'] . "</div><br>
 </div>";
+
+echo"<hr>";
+
+echo "<br><div class='center titre'>Commande n° " . $numero_commande . " : </div><br>";
 
 if ($line == false) {
 
@@ -69,7 +75,7 @@ if ($line == false) {
     <table class='standard-table'>
         <thead>
         <tr>
-            <th>Commandé le :</th>
+            <th>Commandé le</th>
             <th>Produit</th>
             <th>Prix unitaire</th>
             <th>Quantité</th>
@@ -80,7 +86,6 @@ if ($line == false) {
 
     while ($line = $query->fetch()) {
 
-        echo "<div class='product'>";
         echo "<tr>";
         echo "<td>" . $line2['orderDate'] . "</td>";
         echo "<td>" . $line4['productName'] . "</td>";
@@ -89,38 +94,23 @@ if ($line == false) {
         //echo "<td>" . $line['status'] . "</td>";
         echo "<td>" . multiple($line['priceEach'], $line['quantityOrdered']) . "€</td>";
         echo " </tr>";
-        echo "</div>";
-
-
-        /*
-
-                echo "<tr><td> Statut : </td>";
-                echo "<td>" . $line2['status'] . "</td></tr>";
-
-                echo "<tr><td> Expédié le : </td>";
-                echo "<td>" . $line2['shippedDate'] . "</td></tr>";
-
-                echo "<tr><td> Numéro de commande : </td>";
-                echo "<td>" . $line['orderLineNumber'] . "</td></tr>";
-        */
         $price_ht = $price_ht + multiple($line['priceEach'], $line['quantityOrdered']);
     }
-
     // PRIX
-    echo"</tbody>
+    echo "</tbody><table class='standard-table'>
         <tfoot>";
 
-    echo "<tr><td> Total HT: </td>";
-    echo "<td>" . $price_ht . " €</td></tr>";
+    echo "<tr><th> Total HT: </th>";
+    echo "<th>" . number_format($price_ht, 2) . " €</th></tr>";
 
-    echo "<tr><td> Total TVA(20%): </td>";
-    echo "<td>" . multiple($price_ht, 0.2) . " €</td></tr>";
+    echo "<tr><th> Total TVA(20%): </th>";
+    echo "<th>" . number_format(multiple($price_ht, 0.2), 2) . " €</th></tr>";
 
-    echo "<tr><td> Total TTC: </td>";
-    echo "<td>" . multiple($price_ht, 1.2) . " €</td></tr>";
+    echo "<tr><th> Total TTC: </th>";
+    echo "<th>" . number_format(multiple($price_ht, 1.2), 2) . " €</th></tr>";
 
 }
-echo "</tfoot></table></div>";
+echo "</tfoot></table></div></table>";
 
 ?>
 

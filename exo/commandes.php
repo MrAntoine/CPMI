@@ -1,4 +1,4 @@
-<h2>Bons de commande</h2>
+<h1>Bons de commande</h1>
 
 
 <?php
