@@ -12,7 +12,6 @@ function multiple($q, $p)
 $sql6 = "SELECT
             productName,
             priceEach,
-            priceEach * quantityOrdered AS prixTotal,
             quantityOrdered
 
          FROM orderdetails  
