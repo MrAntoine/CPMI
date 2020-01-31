@@ -107,8 +107,8 @@ if ($line == false) {
     }
 
     // PRIX
-    echo"</tbody></table> 
-        <table class='standard-table prix'>";
+    echo"</tbody>
+        <tfoot>";
 
     echo "<tr><td> Total HT: </td>";
     echo "<td>" . $price_ht . " €</td></tr>";
@@ -120,7 +120,7 @@ if ($line == false) {
     echo "<td>" . multiple($price_ht, 1.2) . " €</td></tr>";
 
 }
-echo "</table></div>";
+echo "</tfoot></table></div>";
 
 ?>
 

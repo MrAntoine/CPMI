@@ -1,4 +1,5 @@
 <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
 
 <?php
 include("config/actions.php");
