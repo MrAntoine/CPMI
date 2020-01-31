@@ -7,7 +7,7 @@
 $sql = "SELECT orderNumber, orderDate, shippedDate, status FROM orders ORDER BY orderNumber";
 $query = $pdo->prepare($sql);
 $query->execute();
-$line = $query->fetch();
+$resultat = $query->fetchAll();
 
 
 echo "<div class='wrapper'> 
@@ -22,13 +22,14 @@ echo "<div class='wrapper'>
     </thead>
     <tbody>";
 
-if ($line == false) {
+if ($resultat == false) {
 
     echo "<tr>>Il n'y a aucune commande</tr>";
 
 } else {
 
-    while ($line = $query->fetch()) {
+    //while ($line = $query->fetch()) {
+    foreach($resultat as $line){
 
         echo "<tr>";
         echo "<td><a href='index.php?action=commande&id=" . $line['orderNumber'] . "'>" . $line['orderNumber'] . "</a></td>";
