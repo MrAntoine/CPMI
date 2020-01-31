@@ -29,7 +29,7 @@ if ($resultat == false) {
 } else {
 
     //while ($line = $query->fetch()) {
-    foreach($resultat as $line){
+    foreach ($resultat as $line) {
 
         echo "<tr>";
         echo "<td><a href='index.php?action=commande&id=" . $line['orderNumber'] . "'>" . $line['orderNumber'] . "</a></td>";
